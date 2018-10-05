@@ -12,3 +12,13 @@ Where *n* is the amount of vertices and *m* is the amount of edges.
 *x*, *y* are the x and y coordinates for where the figure of the vertex is to be positioned. *H* and *W* are the height and the width of the figure. *name* is the text that is used as a label for the vertex. 
 
 Opening files can be done from the interface of the program or from the command line by providing the name of the file as an argument to the executable.
+
+Compiling can be done using:
+```mvn compile```
+You can execute the program using one of the following commands:
+```mvn exec:java -Dexec.mainClass="graphEditor.GraphEditor"```
+or
+```cd target/classes
+java graphEditor.GraphEditor```
+or
+```java -cp target/classes/ graphEditor.GraphEditor```
