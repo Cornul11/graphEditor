@@ -14,11 +14,19 @@ Where *n* is the amount of vertices and *m* is the amount of edges.
 Opening files can be done from the interface of the program or from the command line by providing the name of the file as an argument to the executable.
 
 Compiling can be done using:
-```mvn compile```
+```
+mvn compile
+```
 You can execute the program using one of the following commands:
-```mvn exec:java -Dexec.mainClass="graphEditor.GraphEditor"```
+```
+mvn exec:java -Dexec.mainClass="graphEditor.GraphEditor"
+```
 or
-```cd target/classes
-java graphEditor.GraphEditor```
+```
+cd target/classes
+java graphEditor.GraphEditor
+```
 or
-```java -cp target/classes/ graphEditor.GraphEditor```
+```
+java -cp target/classes/ graphEditor.GraphEditor
+```
