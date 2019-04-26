@@ -18,7 +18,7 @@ public class UndoButton extends JButton {
     }
 
     public UndoButton(GraphPanel panel) {
-        super(new UndoAction("", new ImageIcon("target/classes/icons/undo.png"), panel));
+        super(new UndoAction("", new ImageIcon(ClassLoader.getSystemResource("images/undo.png")), panel));
         setButtonProperties();
     }
 }

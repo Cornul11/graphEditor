@@ -18,7 +18,7 @@ public class RedoButton extends JButton {
     }
 
     public RedoButton(GraphPanel panel) {
-        super(new RedoAction("", new ImageIcon("target/classes/icons/redo.png"), panel));
+        super(new RedoAction("", new ImageIcon(ClassLoader.getSystemResource("images/redo.png")), panel));
         setButtonProperties();
     }
 }

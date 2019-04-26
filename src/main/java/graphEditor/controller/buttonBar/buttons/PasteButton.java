@@ -17,7 +17,7 @@ public class PasteButton extends JButton {
     }
 
     public PasteButton(GraphPanel panel) {
-        super(new PasteAction("", new ImageIcon("target/classes/icons/paste.png"), panel));
+        super(new PasteAction("", new ImageIcon(ClassLoader.getSystemResource("images/paste.png")), panel));
         setButtonProperties();
     }
 }

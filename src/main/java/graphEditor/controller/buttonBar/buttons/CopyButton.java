@@ -17,7 +17,7 @@ public class CopyButton extends JButton {
     }
 
     public CopyButton(GraphPanel panel) {
-        super(new CopyAction("", new ImageIcon("target/classes/icons/copy.png"), panel));
+        super(new CopyAction("", new ImageIcon(ClassLoader.getSystemResource("images/copy.png")), panel));
         setButtonProperties();
     }
 }
