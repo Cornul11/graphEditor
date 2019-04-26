@@ -16,6 +16,11 @@ import java.awt.BorderLayout;
 class GraphEditor {
 
     public static void main(String[] args) {
+        GraphEditor mainThread = new GraphEditor();
+        mainThread.run(args);
+    }
+
+    private void run(String[] args) {
         GraphLoaderController graphLoader = new GraphLoaderController(args); //new loader
         GraphModel graphModel = graphLoader.load(); //the graphModel is loaded using the loader
 
