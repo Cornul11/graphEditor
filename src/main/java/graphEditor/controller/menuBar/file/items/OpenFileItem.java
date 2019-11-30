@@ -11,7 +11,7 @@ import java.awt.event.KeyEvent;
 
 public class OpenFileItem extends JMenuItem {
     private void setItemProperties() {
-        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
+        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_DOWN_MASK));
     }
 
     public OpenFileItem(String name, GraphPanel panel, GraphFrame frame) {

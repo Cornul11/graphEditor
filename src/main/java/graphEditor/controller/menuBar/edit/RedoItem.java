@@ -10,7 +10,7 @@ import java.awt.event.KeyEvent;
 
 public class RedoItem extends JMenuItem {
     private void setItemProperties() {
-        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Y, InputEvent.CTRL_MASK));
+        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Y, InputEvent.CTRL_DOWN_MASK));
     }
 
     public RedoItem(GraphPanel panel) {

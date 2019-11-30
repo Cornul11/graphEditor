@@ -10,7 +10,7 @@ import graphEditor.view.GraphPanel;
 
 public class CopyItem extends JMenuItem {
     private void setItemProperties() {
-        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.CTRL_MASK)); //the classic Ctrl+C
+        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.CTRL_DOWN_MASK)); //the classic Ctrl+C
     }
 
     public CopyItem(GraphPanel g) {

@@ -10,7 +10,7 @@ import graphEditor.view.GraphPanel;
 
 public class UndoItem extends JMenuItem {
     private void setItemProperties() {
-        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Z, InputEvent.CTRL_MASK));
+        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Z, InputEvent.CTRL_DOWN_MASK));
     }
 
     public UndoItem(GraphPanel g) {

@@ -32,7 +32,7 @@ public class DeleteEdgeAction extends AbstractAction implements Observer {
     @Override
     public void actionPerformed(ActionEvent e) {
         final ArrayList<GraphEdge> edges = panel.getModel().getEdges();
-        String selectionValues[] = new String[edges.size()]; //initialize the selection values (the amount of edges)
+        String[] selectionValues = new String[edges.size()]; //initialize the selection values (the amount of edges)
         int i = 0;
         for (GraphEdge edge : edges) {
             selectionValues[i++] = String.format("%d: %s <-> %s",
@@ -48,7 +48,7 @@ public class DeleteEdgeAction extends AbstractAction implements Observer {
                 selectionValues,
                 selectionValues[0]);
         if (result != null) {
-            Integer intResult = Integer.parseInt(result.split(":")[0]);
+            int intResult = Integer.parseInt(result.split(":")[0]);
             System.out.println(intResult);
             panel.getModel().removeEdge(edges.get(intResult)); //delete the chosen edge
         }

@@ -10,7 +10,7 @@ import graphEditor.view.GraphPanel;
 
 public class PasteItem extends JMenuItem {
     private void setItemProperties() {
-        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, InputEvent.CTRL_MASK)); //the classic Ctrl+V
+        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, InputEvent.CTRL_DOWN_MASK)); //the classic Ctrl+V
     }
 
     public PasteItem(GraphPanel g) {

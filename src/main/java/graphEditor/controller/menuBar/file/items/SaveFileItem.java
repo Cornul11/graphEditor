@@ -10,7 +10,7 @@ import java.awt.event.KeyEvent;
 
 public class SaveFileItem extends JMenuItem {
     private void setItemProperties() {
-        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK));
+        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_DOWN_MASK));
         setEnabled(false);
         /*
         by the default, when the button is created, the model has not been changed, thus there's nothing to save, so

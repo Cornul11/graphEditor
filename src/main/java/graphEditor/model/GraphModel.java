@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.LineNumberReader;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -132,7 +133,7 @@ public class GraphModel extends Observable implements Observer {
 
         Path file = Paths.get(filename);
         try {
-            Files.write(file, lines, Charset.forName("UTF-8")); //save the file
+            Files.write(file, lines, StandardCharsets.UTF_8); //save the file
         } catch (IOException e) {
             System.err.println("An unexpected error occurred!");
             e.printStackTrace();
@@ -151,7 +152,7 @@ public class GraphModel extends Observable implements Observer {
             int numEdges = Integer.parseInt(tokens[1]);
 
             for (int i = 0; i < numVertices; i++) {
-                String nameString = "";
+                StringBuilder nameString = new StringBuilder();
                 String localLine = buffReader.readLine();
                 String[] localTokens = localLine.split(" "); //split the data about the vertex
                 GraphVertex vertexToAdd = new GraphVertex(this, Integer.parseInt(localTokens[0]), //first is the X coordinate
@@ -160,9 +161,9 @@ public class GraphModel extends Observable implements Observer {
                         Integer.parseInt(localTokens[3]), //fourth is the width
                         " ");
                 for (int tokenIter = 4; tokenIter < localTokens.length; tokenIter++) {
-                    nameString = nameString + localTokens[tokenIter] + " ";
+                    nameString.append(localTokens[tokenIter]).append(" ");
                 }
-                vertexToAdd.setName(nameString);
+                vertexToAdd.setName(nameString.toString());
                 addVertex(vertexToAdd); //the name of the vertex
 
             }

@@ -7,6 +7,7 @@ import graphEditor.view.GraphPanel;
 import javax.swing.AbstractAction;
 import javax.swing.JOptionPane;
 import java.awt.event.ActionEvent;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.io.IOException;
 import java.nio.file.Path;
@@ -47,7 +48,7 @@ public class ExportAction extends AbstractAction {
             lines.add("}");
             Path file = Paths.get(s);
             try {
-                Files.write(file, lines, Charset.forName("UTF-8")); //write to file the content
+                Files.write(file, lines, StandardCharsets.UTF_8); //write to file the content
                 JOptionPane.showMessageDialog(null,
                         "The graph was exported!",
                         "Successfully exported",

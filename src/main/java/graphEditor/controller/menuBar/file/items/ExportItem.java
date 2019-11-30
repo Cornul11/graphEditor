@@ -10,7 +10,7 @@ import java.awt.event.KeyEvent;
 
 public class ExportItem extends JMenuItem {
     private void setItemProperties() {
-        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_E, InputEvent.CTRL_MASK));
+        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_E, InputEvent.CTRL_DOWN_MASK));
     }
 
     public ExportItem(String name, GraphPanel panel) {

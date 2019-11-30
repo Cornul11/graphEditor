@@ -10,7 +10,7 @@ import java.awt.event.KeyEvent;
 
 public class ExitItem extends JMenuItem {
     private void setItemProperties() {
-        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F4, InputEvent.ALT_MASK));
+        setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F4, InputEvent.ALT_DOWN_MASK));
     }
 
     public ExitItem(String name, GraphPanel panel) {
