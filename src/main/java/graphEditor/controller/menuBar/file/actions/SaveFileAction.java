@@ -21,11 +21,8 @@ public class SaveFileAction extends AbstractAction implements Observer {
     }
 
     private void fixEnabled() {
-        if (panel.getModel().isChanged()) { //if the model has changed, then it would make sense to save the file, so...
-            setEnabled(true); //...we activate the item in the menu
-        } else {
-            setEnabled(false);
-        }
+        //if the model has changed, then it would make sense to save the file, so...
+        setEnabled(panel.getModel().isChanged()); //...we activate the item in the menu
     }
 
     @Override

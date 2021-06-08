@@ -26,11 +26,8 @@ public class UndoAction extends AbstractAction implements Observer {
     }
 
     private void fixEnabled() {
-        if (panel.getModel().getUndoManager().canUndo()) { //enabled the button only if we have something to undo
-            setEnabled(true);
-        } else {
-            setEnabled(false);
-        }
+        //enabled the button only if we have something to undo
+        setEnabled(panel.getModel().getUndoManager().canUndo());
     }
 
     @Override

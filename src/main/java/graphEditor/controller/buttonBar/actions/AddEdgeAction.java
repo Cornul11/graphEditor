@@ -17,11 +17,8 @@ public class AddEdgeAction extends AbstractAction implements Observer {
     }
 
     private void fixEnabled() {
-        if (panel.getModel().getSelected() != null) { //if no vertex is selected, you can't add an edge
-            setEnabled(true);
-        } else {
-            setEnabled(false);
-        }
+        //if no vertex is selected, you can't add an edge
+        setEnabled(panel.getModel().getSelected() != null);
     }
 
     @Override

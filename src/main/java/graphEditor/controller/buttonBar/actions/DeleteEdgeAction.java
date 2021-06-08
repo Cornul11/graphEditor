@@ -22,11 +22,8 @@ public class DeleteEdgeAction extends AbstractAction implements Observer {
     }
 
     private void fixEnabled() {
-        if (panel.getModel().getEdges().isEmpty()) { //the button is enabled only when there are edges in the model
-            setEnabled(false);
-        } else {
-            setEnabled(true);
-        }
+        //the button is enabled only when there are edges in the model
+        setEnabled(!panel.getModel().getEdges().isEmpty());
     }
 
     @Override

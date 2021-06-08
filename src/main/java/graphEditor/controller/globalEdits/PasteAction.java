@@ -28,11 +28,8 @@ public class PasteAction extends AbstractAction implements Observer {
     }
 
     private void fixEnabled() {
-        if (panel.getCopyPasteBuffer().paste() != null) { //enable the button only in the case there is a vertex in the buffer
-            setEnabled(true);
-        } else {
-            setEnabled(false);
-        }
+        //enable the button only in the case there is a vertex in the buffer
+        setEnabled(panel.getCopyPasteBuffer().paste() != null);
     }
 
     @Override

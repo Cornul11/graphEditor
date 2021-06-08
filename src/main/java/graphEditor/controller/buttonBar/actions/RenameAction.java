@@ -19,11 +19,8 @@ public class RenameAction extends AbstractAction implements Observer {
     }
 
     private void fixEnabled() {
-        if (panel.getModel().getSelected() != null) { //the button is enabled only when a vertex is selected
-            setEnabled(true);
-        } else {
-            setEnabled(false);
-        }
+        //the button is enabled only when a vertex is selected
+        setEnabled(panel.getModel().getSelected() != null);
     }
 
     @Override

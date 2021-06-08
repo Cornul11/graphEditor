@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.Files;
-import java.nio.charset.Charset;
 
 public class ExportAction extends AbstractAction {
     final private GraphPanel panel;

@@ -5,7 +5,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.LineNumberReader;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -81,13 +80,8 @@ public class GraphModel extends Observable implements Observer {
 
     public void removeVertex(GraphVertex v) {
         vertices.remove(v); //remove the vertex
-        Iterator<GraphEdge> edgeIterator = edges.iterator();
-        while (edgeIterator.hasNext()) {
-            GraphEdge edge = edgeIterator.next();
-            if (edge.getVertices().contains(v)) {
-                edgeIterator.remove(); //remove all the edges that were connected to the vertex
-            }
-        }
+        //remove all the edges that were connected to the vertex
+        edges.removeIf(edge -> edge.getVertices().contains(v));
         setChanged();
         notifyObservers();
     }
@@ -234,7 +228,7 @@ public class GraphModel extends Observable implements Observer {
         notifyObservers();
     }
 
-    //(used for the GraphViz loading)
+    // (used for the GraphViz loading)
     private boolean containsVertex(String s) {
         for (GraphVertex v : vertices) {
             if (v.getName().equals(s)) {

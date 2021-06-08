@@ -26,11 +26,8 @@ public class RedoAction extends AbstractAction implements Observer {
     }
 
     private void fixEnabled() {
-        if (panel.getModel().getUndoManager().canRedo()) { //enable the button only if there is something to be redone
-            setEnabled(true);
-        } else {
-            setEnabled(false);
-        }
+        //enable the button only if there is something to be redone
+        setEnabled(panel.getModel().getUndoManager().canRedo());
     }
 
     @Override
