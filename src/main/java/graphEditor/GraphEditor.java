@@ -9,6 +9,7 @@ import graphEditor.controller.WindowClosing;
 import graphEditor.controller.GraphLoaderController;
 import graphEditor.view.GraphPanel;
 
+import com.formdev.flatlaf.FlatDarculaLaf;
 import javax.swing.JFrame;
 import java.awt.Dimension;
 import java.awt.BorderLayout;
@@ -21,6 +22,7 @@ class GraphEditor {
     }
 
     private void run(String[] args) {
+        FlatDarculaLaf.setup();
         GraphLoaderController graphLoader = new GraphLoaderController(args); //new loader
         GraphModel graphModel = graphLoader.load(); //the graphModel is loaded using the loader
 
